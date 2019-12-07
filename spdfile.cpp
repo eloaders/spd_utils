@@ -3,7 +3,7 @@
 spdFile::spdFile()
 {
       spdBin = new uchar[spdBinSize];
-      qMemSet(spdBin, 0x0, spdBinSize);
+      memset(spdBin, 0x0, spdBinSize);
 }
 
 spdFile::~spdFile()
@@ -119,7 +119,7 @@ void spdFile::closeSpdFile()
 void spdFile::resetBin()
 {
     spdBin = new uchar[spdBinSize];
-    qMemSet(spdBin, 0x0, spdBinSize);
+    memset(spdBin, 0x0, spdBinSize);
     fileLoaded = false;
 }
 
